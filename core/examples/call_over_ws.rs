@@ -9,13 +9,13 @@ fn main() {
 	let fut = connect_ws(&client_url)
 	.and_then(|client| { // connect returns a future
 		client.call( // calling a function also returns a future
-	        "instance_id".into(),
-	        "zome".into(),
-	        "fn_name".into(),
-	        json!({}),
+	        "basic-chat".into(),
+	        "chat".into(),
+	        "register".into(),
+	        json!({"name": "Ferris", "avatar_url": ""}),
     	)
 	}).map(|result| {
-		println!("error: {}", result)
+		println!("success: {}", result)
 	}).map_err(|err| {
 		println!("error: {}", err)
 	});
