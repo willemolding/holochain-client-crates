@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Willem Olding <willemolding@gmail.com>"]
 edition = "2018"
 description = "A client side rust library for communicating with a running Holochain conductor"
-licence = "MIT"
+license = "MIT"
 repository = "https://github.com/willemolding/holochain-client-crates/"
 
 
